@@ -3,10 +3,9 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## Overwiew
 
-	In this project we'll revisit the lake race track from the Behavioral Cloning Project. 
-	This time, however, we'll implement a PID controller in C++ to maneuver the vehicle around the track!
-
-	The simulator will provide us the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle.
+In this project we'll revisit the lake race track from the Behavioral Cloning Project. 
+This time, however, we'll implement a PID controller in C++ to maneuver the vehicle around the track!
+The simulator will provide us the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle.
 
 ## Dependencies
 
@@ -49,21 +48,21 @@ The implementation of the PID is done in the CCP.ccp file, where in the PID::Upd
 
 ### Describe the effect each of the P, I, D components had in your implementation.
 
-	P - The proportional factor deals with how far are we from the center of the road.
+P - The proportional factor deals with how far are we from the center of the road.
 
-	I - The integral factor deals with the systematic bias as the wheels are not alligned. 
+I - The integral factor deals with the systematic bias as the wheels are not alligned. 
 
-	D - The derivative factor deals with oscillation around the center line. 
+D - The derivative factor deals with oscillation around the center line. 
 
 ### Describe how the final hyperparameters were chosen.
 
-	I chose the final hyperparameters of the P.I.D controller by tuning it manually.
-	First I tried to tune the Kp value alone around -1,0. In the straight road it controlled the car around the center, but as the vehicle moved to a turn, It wiggled out of the road.  
-	I tuned the Kp value to -0.1, changed the Kd value to -1.0 and I set the Ki value to 0.0 and left unchanged during the tuning process, because I expected and found out that the wheels are alligned.
-	As I tuned the Kd value further the car started to move much more smoothly and the car finally drove around the track.
-	In the and I chose the following value for Kp -0,15 and for Kd -2,7.
+I chose the final hyperparameters of the P.I.D controller by tuning it manually.
+First I tried to tune the Kp value alone around -1,0. In the straight road it controlled the car around the center, but as the vehicle moved to a turn, It wiggled out of the road.  
+I tuned the Kp value to -0.1, changed the Kd value to -1.0 and I set the Ki value to 0.0 and left unchanged during the tuning process, because I expected and found out that the wheels are alligned.
+As I tuned the Kd value further the car started to move much more smoothly and the car finally drove around the track.
+In the and I chose the following value for Kp -0,15 and for Kd -2,7.
 
 ### The vehicle must successfully drive a lap around the track.
 
-	After tuning the Kp, Ki, Kd values, the car successfully drove around the track.
+After tuning the Kp, Ki, Kd values, the car successfully drove around the track.
 
