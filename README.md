@@ -57,10 +57,10 @@ D - The derivative factor deals with oscillation around the center line.
 ### Describe how the final hyperparameters were chosen.
 
 I chose the final hyperparameters of the P.I.D controller by tuning it manually.
-First I tried to tune the Kp value alone around -1,0. In the straight road it controlled the car around the center, but as the vehicle moved to a turn, It wiggled out of the road.  
+First I tried to tune the Kp value alone around -1.0. In the straight road it controlled the car around the center, but as the vehicle moved to a turn, It wiggled out of the road.
 I tuned the Kp value to -0.1, changed the Kd value to -1.0 and I set the Ki value to 0.0 and left unchanged during the tuning process, because I expected and found out that the wheels are alligned.
 As I tuned the Kd value further the car started to move much more smoothly and the car finally drove around the track.
-In the and I chose the following value for Kp -0,15 and for Kd -2,7.
+In the and I chose the following value for Kp -0.15 and for Kd -2.7.
 
 ### The vehicle must successfully drive a lap around the track.
 
